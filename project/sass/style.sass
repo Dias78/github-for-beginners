@@ -24,7 +24,7 @@ body, p, h1, h2, h3, h4
 		font-weight: 700
 		color: darken($primary, 50%)
 		span
-			color: $coral
+			color: adjust-hue($primary, 150)
 	&__underline
 		margin: 10px auto
 		width: 200px
@@ -32,7 +32,7 @@ body, p, h1, h2, h3, h4
 		background-color: darken($primary, 40%)
 
 .coral
-	color: $coral
+	color: adjust-hue($primary, 150)
 
 .main
 	background-color: lighten($primary, 30%)
@@ -63,7 +63,7 @@ body, p, h1, h2, h3, h4
 		border: 1px solid darken($primary, 50%)
 	.comment
 		margin-top: 55px
-		color: $secondary
+		color: desaturate(adjust-hue($primary, -205), 100.00)
 		font-size: 14px
 		line-height: 18px
 
@@ -110,7 +110,7 @@ body, p, h1, h2, h3, h4
 	font-weight: 300
 	background-color: darken($primary, 50%)
 	&__left
-		color: $info
+		color: desaturate($primary, 50.00)
 		opacity: 0.5
 	&__right
 		text-align: right
@@ -130,14 +130,14 @@ body, p, h1, h2, h3, h4
 	text-align: center
 	text-transform: uppercase
 	color: white
-	background-color: $coral
-	border: 1px solid $coral
+	background-color: adjust-hue($primary, 150)
+	border: 1px solid adjust-hue($primary, 150)
 	border-radius: 25px
 	&__start
 		margin-top: 20px
 
 	&:hover
-		box-shadow: 0 0 25px $secondary
+		box-shadow: 0 0 25px desaturate(adjust-hue($primary, -205), 100.00)
 		background-color: $primary
 		border: 1px solid lighten($primary, 30%)
 
